@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dara Sparrow contacts</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="../css/style.min.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container mt-0">
+			<nav class="menu-top">
+				<a href="../index.html" class="menu-top__link lang-link-home">Главная</a>
+				<a href="portfolio.html" class="menu-top__link lang-link-portfolio">Портфолио</a>
+				<select name="language" class="select static">
+					<option value="ru">RU</option>
+					<option value="en">EN</option>
+				</select>
+			</nav>
+		</div>
+	</header>
+	<div class="container">
+		<div class="logo">
+			<img src="../img/logo.png" alt="" class="logo__img">
+		</div>
+		<div class="contacts">
+			<ul class="contacts__list">
+				<li class="contacts__item lang-connection">Свяжитесь со мной:</li>
+				<li class="contacts__item">IG:
+					<a href="https://www.instagram.com/dara.sparrow/" class="contacts__link"
+						target="blank">@dara.sparrow</a>
+				</li>
+				<li class="contacts__item">e-mail:
+					<a href="mailto:dara.sparrow@gmail.com" class="contacts__link">dara.sparrow@gmail.com</a>
+				</li>
+			</ul>
+
+		</div>
+		<form class="feed-form" action="send.php" id="form" method="post" onsubmit="send(event, 'send.php')">
+			<p class="feed-form__row lang-form">или заполните форму ниже:</p>
+			<div class="wrapper-flex">
+				<input required placeholder="имя/name" type="text" name="username">
+				<input required placeholder="e-mail" type="email" name="useremail">
+			</div>
+			<textarea placeholder="Ведите текст/enter text" name="usertext" id="usertext" cols="30" rows="1"></textarea>
+			<div class="checkbox">
+				<input id="usercheck" checked required type="checkbox" name="usercheck" class="checkbox__input">
+				<label for="usercheck" class="checkbox__label"><span> <span class="lang-personal-data">Я даю своё
+							согласие на обработку персональных данных в соответствии с</span>
+						<a href="personalData.html" class="checkbox__link lang-terms"
+							target="blank">Условиями</a>*</span>
+				</label>
+			</div>
+			<button class="button lang-button">Отправить</button>
+		</form>
+
+	</div>
+	<div class="modal">
+		<div class="modal__window">
+			<span class="modal__close">&times;</span>
+			<h3 class="modal__title">Спасибо за обращение!</h3>
+		</div>
+	</div>
+	<script src="../js/lang.js"></script>
+	<script src="../js/main.min.js"></script>
+</body>
+
+</html>
